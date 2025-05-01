@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h1>Disease Detection System</h1>
+            </div>
+            <p class="subtitle">Advanced NLP-powered medical condition detection</p>
+            <div class="header-decoration">
+                <span class="dot"></span>
+                <span class="line"></span>
+                <span class="dot"></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="input-methods">
+                    <div class="text-input card">
+                        <div class="card-header">
+                            <div class="header-icon">
+                                <i class="fas fa-pen-to-square"></i>
+                            </div>
+                            <h3>Enter Text</h3>
+                        </div>
+                        <textarea id="medicalText" placeholder="Enter medical text here..."></textarea>
+                    </div>
+                    <div class="file-input card">
+                        <div class="card-header">
+                            <div class="header-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <h3>Or Upload PDF</h3>
+                        </div>
+                        <div class="file-upload-container">
+                            <input type="file" id="pdfFile" accept=".pdf" class="file-input-hidden">
+                            <label for="pdfFile" class="file-upload-label">
+                                <div class="upload-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <span>Choose PDF File</span>
+                                <span class="file-name" id="fileName">No file chosen</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="detectBtn" class="primary-btn">
+                        <i class="fas fa-search"></i>
+                        <span>Detect Diseases</span>
+                    </button>
+                    <button id="exampleBtn" class="secondary-btn">
+                        <i class="fas fa-file-lines"></i>
+                        <span>Load Example</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="results-section card">
+                <div class="card-header">
+                    <div class="header-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h2>Detection Results</h2>
+                </div>
+                <div id="results" class="results-container">
+                    <div class="loading" style="display: none;">
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <span>Analyzing text...</span>
+                    </div>
+                    <div id="diseaseList" class="disease-list"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-heartbeat"></i>
+                    <p>Powered by NLP Disease Detection</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
